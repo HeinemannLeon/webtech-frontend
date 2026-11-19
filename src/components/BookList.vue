@@ -14,7 +14,7 @@ interface Book {
 const books = ref<Book[]>([])
 
 onMounted(async () => {
-  const response = await fetch('http://localhost:8080/PagePilot')
+  const response = await fetch('https://backend-tspr.onrender.com/PagePilot')
   books.value = await response.json()
 })
 </script>
